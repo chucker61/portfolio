@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Portfolio</title>
-    <base href="/" />
+    <base href="/portfolio/" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,16 @@
             <div class="loading-progress-text"></div>
         </div>
     </div>
+
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        window.blazorInitialized = false;
+        window.initializeBlazor = function () {
+            if (!window.blazorInitialized) {
+                window.blazorInitialized = true;
+            }
+        };
+    </script>
 </body>
 
 </html>
