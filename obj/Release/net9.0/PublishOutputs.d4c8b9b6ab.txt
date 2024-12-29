@@ -1,0 +1,1 @@
+C:\Users\Chucker\Desktop\new\BlazorApp\release\web.config
