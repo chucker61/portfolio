@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="manifest.json" rel="manifest" />
 </head>
 
 <body>
@@ -20,14 +21,19 @@
         </div>
     </div>
 
-    <script src="_framework/blazor.webassembly.js"></script>
+    <div id="blazor-error-ui">
+        Bir hata oluştu. Sayfayı yenileyip tekrar deneyin.
+        <a href="" class="reload">Yenile</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script>
-        window.blazorInitialized = false;
-        window.initializeBlazor = function () {
-            if (!window.blazorInitialized) {
-                window.blazorInitialized = true;
+        Blazor.start({
+            loadBootResource: function (type, name, defaultUri, integrity) {
+                return defaultUri;
             }
-        };
+        });
     </script>
 </body>
 

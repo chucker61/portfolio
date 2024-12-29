@@ -7,10 +7,15 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v3
 
@@ -19,8 +24,11 @@ jobs:
         with:
           dotnet-version: '7.0.x'
 
+      - name: Install workload
+        run: dotnet workload install wasm-tools
+
       - name: Publish
-        run: dotnet publish BlazorApp.csproj -c Release -o release --nologo
+        run: dotnet publish BlazorApp/BlazorApp.csproj -c Release -o release
 
       - name: Change base-tag
         run: sed -i 's/<base href="\/"/<base href="\/portfolio\/"/' release/wwwroot/index.html
@@ -28,9 +36,14 @@ jobs:
       - name: Add .nojekyll file
         run: touch release/wwwroot/.nojekyll
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Copy index.html to 404.html
+        run: cp release/wwwroot/index.html release/wwwroot/404.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          folder: release/wwwroot
-          branch: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }} 
+          path: release/wwwroot
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2 
