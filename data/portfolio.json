@@ -1,0 +1,90 @@
+{
+    "skills": [
+        {
+            "title": "Backend Geliştirme",
+            "technologies": "ASP.NET Core, C#, Entity Framework Core, Web API, gRPC"
+        },
+        {
+            "title": "Frontend Teknolojileri",
+            "technologies": "Blazor, Angular, TypeScript, SASS, Bootstrap"
+        },
+        {
+            "title": "Veritabanı & Cloud",
+            "technologies": "SQL Server, Redis, Azure, Docker, Kubernetes"
+        },
+        {
+            "title": "Yazılım Mimarisi",
+            "technologies": "Microservices, DDD, CQRS, Event Sourcing, Clean Architecture"
+        },
+        {
+            "title": "DevOps & Testing",
+            "technologies": "CI/CD, Azure DevOps, xUnit, Moq, Selenium"
+        },
+        {
+            "title": "Diğer Teknolojiler",
+            "technologies": "RabbitMQ, SignalR, GraphQL, OAuth 2.0, JWT"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Mikroservis E-Ticaret Platformu",
+            "description": "Modern bir e-ticaret çözümü.",
+            "techStack": "ASP.NET Core, gRPC, RabbitMQ, Docker, Kubernetes",
+            "features": [
+                "Mikroservis mimarisi",
+                "Container orchestration",
+                "Asenkron iletişim"
+            ]
+        },
+        {
+            "title": "Blazor Proje Yönetim Sistemi",
+            "description": "Real-time özelliklere sahip proje yönetim uygulaması.",
+            "techStack": "Blazor WebAssembly, SignalR, Azure Services",
+            "features": [
+                "Gerçek zamanlı güncellemeler",
+                "Azure entegrasyonu",
+                "Responsive tasarım"
+            ]
+        },
+        {
+            "title": "IoT Veri Analiz Platformu",
+            "description": "IoT cihazlarından gelen verileri işleyen analiz platformu.",
+            "techStack": "ASP.NET Core, Event Sourcing, CQRS",
+            "features": [
+                "Gerçek zamanlı veri işleme",
+                "İleri düzey analitik",
+                "Ölçeklenebilir mimari"
+            ]
+        },
+        {
+            "title": "AI Destekli Müşteri Hizmetleri Platformu",
+            "description": "Yapay zeka tabanlı müşteri destek sistemi.",
+            "techStack": "ASP.NET Core, ML.NET, Azure Cognitive Services",
+            "features": [
+                "Doğal dil işleme",
+                "Otomatik ticket sınıflandırma",
+                "Chatbot entegrasyonu"
+            ]
+        },
+        {
+            "title": "Finans Portföy Yönetim Sistemi",
+            "description": "Yatırım portföyü takip ve analiz platformu.",
+            "techStack": "Blazor Server, Entity Framework Core, SQL Server",
+            "features": [
+                "Gerçek zamanlı portföy takibi",
+                "Otomatik raporlama",
+                "Risk analizi"
+            ]
+        },
+        {
+            "title": "Sağlık Veri Yönetim Sistemi",
+            "description": "Hastane ve klinikler için veri yönetim çözümü.",
+            "techStack": "ASP.NET Core, HL7 FHIR, MongoDB",
+            "features": [
+                "HIPAA uyumlu",
+                "Elektronik sağlık kayıtları",
+                "Entegre randevu sistemi"
+            ]
+        }
+    ]
+} 
