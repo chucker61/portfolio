@@ -28,7 +28,8 @@ jobs:
         run: dotnet workload install wasm-tools
 
       - name: Publish
-        run: dotnet publish BlazorApp/BlazorApp.csproj -c Release -o release
+        working-directory: BlazorApp
+        run: dotnet publish -c Release -o ../release
 
       - name: Change base-tag
         run: sed -i 's/<base href="\/"/<base href="\/portfolio\/"/' release/wwwroot/index.html
