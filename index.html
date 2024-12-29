@@ -19,7 +19,16 @@
             <div class="loading-progress-text"></div>
         </div>
     </div>
+
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        window.blazorInitialized = false;
+        window.initializeBlazor = function () {
+            if (!window.blazorInitialized) {
+                window.blazorInitialized = true;
+            }
+        };
+    </script>
 </body>
 
 </html>
